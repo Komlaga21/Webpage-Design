@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLib Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #333, #6a8d92);
+        }
+        .container {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            text-align: center;
+            color: white;
+        }
+        .logo {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .google-btn {
+            background: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .google-btn img {
+            width: 20px;
+            height: 20px;
+        }
+        .phone-btn {
+            background: black;
+            color: white;
+        }
+
+       
+        .input-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background: #2a2a2a;
+            color: white;
+        }
+        
+        .sign-in {
+            background: rgb(0, 0, 0); /* Change this to any color you want */
+            color: white;
+            width: 100%;
+        }
+        .forgot-password {
+            font-size: 12px;
+            margin-top: 10px;
+            display: inline-block;
+            color: #aaa;
+        }
+        .sign-up {
+            background: #444;
+            color: white;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .sign-in a {
+        color: white; /* Change this to any color you want */
+        text-decoration: none; /* Removes the underline */
+        display: block; /* Ensures the link fills the button */
+        width: 100%;
+        text-align: center;
+        padding: 3px 0;
+}
+
+        .sign-up a {
+        color: white; /* Change this to any color you want */
+        text-decoration: none; /* Removes the underline */
+        display: block; /* Ensures the link fills the button */
+        width: 100%;
+        text-align: center;
+        padding: 3px 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.svg" alt="EduLib Logo" class="logo">
+        <h2>Sign in to EduLib</h2>
+        <button class="btn google-btn">
+            <img src="google.svg" alt="google logo"> Continue with Google
+        </button>
+        <button class="btn phone-btn">Continue with Phone number</button>
+        <div class="input-group">
+            <label>Email/username</label>
+            <input type="text" placeholder="Email/username">
+        </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" placeholder="Password">
+        </div>
+        <button class="btn sign-in"><a href="index.html">Sign in</a></button>
+        <a href="Forgot password.html" class="forgot-password">Forgotten password?</a>
+        <button class="btn sign-up"><a href="index.html">Sign up</a></button>
+    </div>
+    
+</body>
+</html>

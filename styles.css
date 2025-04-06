@@ -1,0 +1,358 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: relative; /* Ensure body is positioned */
+    height: 100vh;
+    overflow: auto;
+}
+
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('fonts/Orbitron-Regular.tff2') format('tff2'),
+         url('fonts/Orbitron-Regular.tff') format('tff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('fonts/Orbitron-Bold.tff2') format('tff2'),
+         url('fonts/Orbitron-Bold.tff') format('tff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+.background-text {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 7rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgb(0, 0, 0), 0 0 20px rgb(62, 62, 62), 0 0 40px rgb(69, 69, 69);
+    z-index: -1;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    border-radius: 0 0 20px 20px;    
+    padding: 10px 20px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+/* Left Icons (Three Dots + Navigation Arrows) */
+.menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.menu-icons .dots {
+    letter-spacing: 3px;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    top:12px;
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #333;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-container input::placeholder {
+    color: gray;
+}
+
+.search-icon img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    top: -30px;
+    left: 10px;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.profile-icon img{
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+/* Sidebar */
+.sidebar {
+    position: relative;
+    z-index: 10;
+    width: 80px;
+    height: calc(90.2vh - 80px);
+    background-color: #111;
+    position: fixed;
+    top: 94px;
+    left: 10px;
+    padding-top: 20px;
+    border-radius: 50px 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+/* Sidebar Buttons */
+.sidebar .menu-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar a {
+    text-decoration: none; /* Remove the default underline */
+    width: 85%; /* Ensure full width */
+}
+
+.sidebar button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 0;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    transition:  0.3s ease, transform 0.2s ease;
+}
+
+.sidebar button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar a:hover button {
+    background-color: rgba(255, 255, 255, 0.2); /* Adds a subtle hover effect */
+    border-radius: 35%;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.sidebar button span {
+    margin-top: 5px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.sidebar button:hover {
+    background-color: #333;
+    border-radius: 35%;
+    transform: scale(1.1);
+}
+
+.sidebar button:hover img {
+    transform: rotate(10deg) scale(1.2);
+}
+
+.sidebar button:hover span {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+
+/* Home Button */
+.home-btn,
+.save-btn,
+.history-btn,
+.settings-btn,
+.download-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.home-icon,
+.save-icon,
+.history-icon,
+.settings-icon,
+.download-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text,
+.save-text,
+.history-text,
+.settings-text,
+.download-text {
+    margin-top: 5px;
+}
+
+/* Hover effect */
+.home-btn:hover,
+.save-btn:hover,
+.history-btn:hover,
+.settings-btn:hover,
+.download-btn:hover {
+    opacity: 0.8;
+}
+
+/* Main Content */
+.main-content {
+    position: fixed;  /* Keeps it in place */
+    top: 30px; /* Moves it below the top bar */
+    left: 100px; /* Moves it beside the sidebar */
+    width: calc(200px - 100px); /* Adjusts width to fit */
+    background-color: #222; /* Optional: match background */
+    padding: 10px 20px;
+    z-index: 1;
+    
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tabs div {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tabs div.active {
+    position: relative;
+    border-bottom: none;
+
+}
+
+.tabs div.active::after {
+    content: "";
+    position: absolute;
+    bottom: 8px; /* Moves the underline UP */
+    left: 32px;
+    width: 30%;
+    height: 3px; /* Thickness of the underline */
+    border-radius: 20px;
+    background-color: white; /* Color of the underline */
+}
+
+/* Content Area - Grid Layout */
+.content-area {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(70, 70, 70, 0.9);
+    border-radius: 0 50px 50px 0;
+    padding: 20px;
+    margin: 0 auto;
+    width: fit-content;
+    margin-left: -29px;
+    margin-top: -5px; /* Pushes content down */
+    overflow-y: auto; /* Allows scrolling only inside */
+    max-height: calc(90vh - 80px); /* Prevents overflowing */
+}
+
+.content-area img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content-area::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari, Edge */
+}
+
+/* Style for the three-dot button */
+.dots-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white; /* Change color if needed */
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #111;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    left: 10px; /* Position to the right */
+    top: 50px; /* Adjust based on layout */
+    min-width: 150px;
+    z-index: 1000;
+}
+
+/* Style for the buttons inside dropdown */
+.dropdown-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    color: rgb(255, 255, 255);
+}
+
+.dropdown-menu button:hover {
+    background: #000000;
+}
+

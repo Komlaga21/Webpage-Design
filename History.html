@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLib</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<script src="settings.js"></script>
+<body>
+    <div class="background-text">EduLib</div>
+
+    
+    <div class="top-bar">
+        <div class="menu-icons">
+            <!-- Three-dot menu button -->
+<button class="dots-button" onclick="toggleMenu()">•••</button>
+
+<!-- Dropdown menu for logout and delete account -->
+<div id="menuDropdown" class="dropdown-menu">
+    <button onclick="logout()">Log Out</button>
+    <button onclick="deleteAccount()">Delete Account</button>
+</div>
+
+
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Enter title, author, subject, keywords">
+            <span class="search-icon"><img src="search.svg" alt="search button"></span>
+        </div>
+        <div class="profile">
+            <span class="username">Komlaga Harold</span>
+            <div class="profile-icon"><img src="image 1.svg" alt="profile"></div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <a href="index.html"><button><img src="Home 1.svg" alt="Home"><span>Home</span></button></a>
+        <a href="saved.html"><button><img src="bookmark.svg" alt="Save"><span>Saved</span></button></a>
+        <a href="Downloaded.html"><button><img src="download.svg" alt="Download"><span>Downloads</span></button></a>
+        <a href="history.html"><button><img src="History 1.svg" alt="History"><span>History</span></button></a>
+        <a href="settings.html"><button><img src="settings 1.svg" alt="Settings"><span>Settings</span></button></a>
+    </div>
+
+    <div class="main-content">
+        <div class="tabs">
+            <div class="active">History</div>
+            
+        </div>
+        <div class="content-area">
+            <div class="book">
+                <img src="image 2.svg" alt="book10">
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 65%;"></div>
+                </div>
+                <span class="progress-text">65%</span>
+            </div>
+        
+            <div class="book">
+                <img src="image 15.svg" alt="book19">
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+                <span class="progress-text">80%</span>
+            </div>
+        
+            <div class="book">
+                <img src="image 4.svg" alt="book7">
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 40%;"></div>
+                </div>
+                <span class="progress-text">40%</span>
+            </div>
+           
+    </div>
+</body>
+</html>

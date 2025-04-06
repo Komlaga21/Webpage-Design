@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLib</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="settings.js"></script>
+<body>
+    
+
+    <div class="background-text">EduLib</div>
+
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="menu-icons">
+            <!-- Three-dot menu button -->
+<button class="dots-button" onclick="toggleMenu()">•••</button>
+
+<!-- Dropdown menu for logout and delete account -->
+<div id="menuDropdown" class="dropdown-menu">
+    <button onclick="logout()">Log Out</button>
+    <button onclick="deleteAccount()">Delete Account</button>
+</div>
+
+
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Enter title, author, subject, keywords">
+            <span class="search-icon"> <img src="search.svg" alt="search button"></span>
+        </div>
+        <div class="profile">
+            <span class="username">Komlaga Harold</span>
+            <div class="profile-icon"> <img src="image 1.svg" alt="profile"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html"><button><img src="Home.svg" alt="Home"><span>Home</span></button></a>
+        <a href="saved.html"><button><img src="bookmark.svg" alt="Save"><span>Saved</span></button></a>
+        <a href="Downloaded.html"><button><img src="download.svg" alt="Download"><span>Downloads</span></button></a>
+        <a href="history.html"><button><img src="history.svg" alt="History"><span>History</span></button></a>
+        <a href="settings.html"><button><img src="settings 1.svg" alt="Settings"><span>Settings</span></button></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="tabs">
+            <div class="active">Library</div>
+            <div>Popular</div>
+        </div>
+
+        <div class="content-area">
+            <a href="pdfs/The_Houseplant_Handbook_-_Maddie_Bailey_Alice_Bailey.pdf" target="_blank"><img src="image 13.svg" alt="book1"></a>
+            <a href="pdfs/Full-Stack_JavaScript_Strategies_4th_ER_-_Milecia_McGregor.pdf" target="_blank"><img src="image 16.svg" alt="book2"></a>
+            <a href="pdfs/5G_Green_Communication_Networks_for_Smart_-_Devasis_Pradhan_2.pdf" target="_blank"><img src="image 17.svg" alt="book3"></a>
+            <a href="pdfs/City_of_Smoke_and_Sea_-_Malia_Marquez.pdf" target="_blank"><img src="image 20.svg" alt="book4"></a>
+            <a href="pdfs/Breaking_Bread_How_Baking_Shaped_Our_World_-_David_Wright.pdf" target="_blank"><img src="image 22.svg" alt="book5"></a>
+            <a href="pdfs/My_Own_Dear_People_-_Dwight_Thompson.pdf" target="_blank"><img src="image 23.svg" alt="book6"></a>
+            <a href="pdfs/The_Notorious_Virtues_-_Alwyn_Hamilton.pdf" target="_blank"><img src="image 6.svg" alt="book7"></a>
+            <a href="pdfs/Swept_away_-_Beth_o_leary.pdf" target="_blank"><img src="image 9.svg" alt="book8"></a>
+            <a href="pdfs/10_Marchfield_Square_-_Nicola_Whyte.pdf" target="_blank"><img src="image 2.svg" alt="book9"></a>
+            <a href="pdfs/Land_of_Dreams_-_Lauraine_Snelling.pdf" target="_blank"><img src="image 7.svg" alt="book10"></a>
+            <a href="pdfs/The_River_Knows_Your_Name_-_Kelly_Mustian.pdf" target="_blank"><img src="image 18.svg" alt="book11"></a>
+            <a href="pdfs/A_Carnival_of_Atrocities_-_Natalia_Garcia_Freire.pdf" target="_blank"><img src="image 11.svg" alt="book12"></a>
+            <a href="pdfs/The_Burning_Heart_of_the_World_-_Nancy_Kricorian.pdf" target="_blank"><img src="image 4.svg" alt="book13"></a>
+            <a href="pdfs/Cats_People_-_Tanya_Guerrero.pdf" target="_blank"><img src="image 12.svg" alt="book14"></a>
+            <a href="pdfs/All_That_Life_Can_Afford_-_Emily_Everett.pdf" target="_blank"><img src="image 14.svg" alt="book15"></a>
+            <a href="pdfs/Bad_Nature_-_Ariel_Courage.pdf" target="_blank"><img src="image 24.svg" alt="book16"></a>
+            <a href="pdfs/I_See_Youve_Called_in_Dead_-_John_Kenney.pdf" target="_blank"><img src="image 10.svg" alt="book17"></a>
+            <a href="pdfs/Attila_-_Javier_Serena.pdf" target="_blank"><img src="image 25.svg" alt="book18"></a>
+            <a href="pdfs/Overheard_-_Dominik_Barta.pdf" target="_blank"><img src="image 15.svg" alt="book19"></a>
+            <a href="pdfs/Shatterproof_-_Tasha_Eurich.pdf" target="_blank"><img src="image 21.svg" alt="book20"></a>
+            <a href="pdfs/Pronoun_Trouble_-_John_McWhorter.pdf" target="_blank"><img src="image 3.svg" alt="book21"></a>
+            <a href="pdfs/A_Little_Daylight_Left_Poems_-_Sarah_Kay.pdf" target="_blank"><img src="image 19.svg" alt="book22"></a>
+            <a href="pdfs/The_Thorns_-_Dawn_Kurtagich.pdf" target="_blank"><img src="image 5.svg" alt="book23"></a>
+            <a href="pdfs/Off_the_Spectrum_-_Gina_Rippon.pdf" target="_blank"><img src="image 27.svg" alt="book24"></a>
+
+
+                     <!-- PDF Reader Wrapper -->
+  <div id="reader" style="display: none; width: 100%; height: 90vh; flex-direction: column;">
+    <button onclick="closeBook()" style="margin-bottom: 10px;">← Back to Library</button>
+    <iframe id="pdf-viewer" src="" width="100%" height="100%"></iframe>
+  </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
